@@ -1,6 +1,4 @@
-package ru.mephi.week1.lesson1;
-
-import java.util.Arrays;
+package ru.mephi.week3.lesson1;
 
 public class Task1Solved {
 
