@@ -1,6 +1,8 @@
 package ru.mephi.week3.lesson2;
 
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Task3Solved {
 
