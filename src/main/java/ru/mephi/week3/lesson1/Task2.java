@@ -1,5 +1,7 @@
 package ru.mephi.week3.lesson1;
 
+import java.util.Arrays;
+
 public class Task2 {
 
     /**
@@ -12,7 +14,22 @@ public class Task2 {
         int[] nums = {1, 2, 2, 4, 5, 6, 7, 8, 2, 10};
         int val = 2;
 
-        // todo: write code
+        int offset = 0;
+
+        for (int i = 0; i < nums.length; i++) {
+
+            if (nums[i] == val) {
+                offset += 1;
+            } else if (offset != 0) {
+                nums[i - offset] = nums[i];
+            }
+
+        }
+
+        System.out.print("out array: ");
+        for (int i = 0; i < nums.length; i++) {
+            System.out.print(nums[i] + " ");
+        }
 
     }
 

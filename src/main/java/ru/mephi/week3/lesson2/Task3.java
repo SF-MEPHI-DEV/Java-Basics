@@ -1,5 +1,7 @@
 package ru.mephi.week3.lesson2;
 
+import java.util.Scanner;
+
 public class Task3 {
 
     /**
@@ -22,8 +24,28 @@ public class Task3 {
 
     public static void main(String[] args) {
 
-        // TODO: write code
+        Scanner scanner = new Scanner(System.in);
+        String userName = scanner.nextLine();
+        System.out.println("Is name correct: " + validName(userName));
+        String userEmail = scanner.nextLine();
+        System.out.println("Is name correct: " + validEmail(userEmail));
 
+    }
+
+    public static boolean validName(String name) {
+        return name.matches("[A-Z][a-z]*");
+    }
+
+    public static boolean validEmail(String email) {
+        // glebpavlyuk@gamil.com
+        return email.matches("[\\w._]+@[\\w._]+\\.[a-zA-Z]{2,6}");
+    }
+
+    public static boolean validPassword(String password) {
+        return password.length() > 8
+                && password.matches(".*\\d.*")
+                && password.matches(".*[A-Z].*")
+                && password.matches(".*[!@#$%^&*()_+].*");
     }
 
 }
