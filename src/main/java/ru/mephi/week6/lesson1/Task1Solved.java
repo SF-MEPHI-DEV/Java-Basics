@@ -1,8 +1,6 @@
 package ru.mephi.week6.lesson1;
 
 import java.io.*;
-import java.net.SocketTimeoutException;
-import java.nio.file.Files;
 import java.util.Scanner;
 
 public class Task1Solved {
