@@ -1,20 +1,20 @@
-package ru.mephi.week7.lesson1.Task1Soved;
+package ru.mephi.week7.lesson1.Task2Soved;
 
-import ru.mephi.week7.lesson1.Task1Soved.exceptions.AccountNotFoundException;
-import ru.mephi.week7.lesson1.Task1Soved.exceptions.InsufficientBalanceException;
-import ru.mephi.week7.lesson1.Task1Soved.exceptions.InvalidSumException;
-import ru.mephi.week7.lesson1.Task1Soved.exceptions.LimitExceededException;
+import ru.mephi.week7.lesson1.Task2Soved.exceptions.AccountNotFoundException;
+import ru.mephi.week7.lesson1.Task2Soved.exceptions.InsufficientBalanceException;
+import ru.mephi.week7.lesson1.Task2Soved.exceptions.InvalidSumException;
+import ru.mephi.week7.lesson1.Task2Soved.exceptions.LimitExceededException;
 
 public class BankAccount {
 
-    private final double withdrawalLimit;
+    private final double sumLimit;
     private final String accountNumber;
     private double balance;
 
-    public BankAccount(String accountNumber, double initialBalance, double withdrawalLimit) {
+    public BankAccount(String accountNumber, double initialBalance, double sumLimit) {
         this.accountNumber = accountNumber;
         this.balance = initialBalance;
-        this.withdrawalLimit = withdrawalLimit;
+        this.sumLimit = sumLimit;
     }
 
     public String getAccountNumber() {
@@ -40,14 +40,19 @@ public class BankAccount {
         if (amount > balance) {
             throw new InsufficientBalanceException("Недостаточно средств для снятия.");
         }
-        if (amount > withdrawalLimit) {
+        if (amount > sumLimit) {
             throw new LimitExceededException("Сумма превышает лимит снятия.");
         }
         balance -= amount;
         System.out.println("Снятие на сумму: " + amount + ". Остаток: " + balance);
     }
 
-    public void transfer(BankAccount toAccount, double amount) throws InvalidSumException, InsufficientBalanceException, LimitExceededException, AccountNotFoundException {
+    public void transfer(BankAccount toAccount, double amount)
+            throws InvalidSumException,
+            InsufficientBalanceException,
+            LimitExceededException,
+            AccountNotFoundException {
+
         if (toAccount == null) {
             throw new AccountNotFoundException("Счет-получатель не найден.");
         }
