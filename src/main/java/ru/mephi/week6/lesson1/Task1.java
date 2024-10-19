@@ -1,5 +1,8 @@
 package ru.mephi.week6.lesson1;
 
+import java.io.*;
+import java.util.Scanner;
+
 public class Task1 {
 
     /**
@@ -15,7 +18,52 @@ public class Task1 {
      * </ul>
      */
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter source file");
+        String sourceFilePath = scanner.nextLine();
+
+        File sourceFile = new File(sourceFilePath);
+        if (!sourceFile.exists()) {
+            System.out.println("Source file not found");
+            return;
+        }
+
+        System.out.println("Enter destination file");
+        String destinationFilePath = scanner.nextLine();
+
+        File destinationFile = new File(destinationFilePath);
+        boolean append = false;
+
+        if (destinationFilePath.equals(sourceFilePath)) {
+            System.out.println("file are the same");
+            return;
+        }
+
+        if (destinationFile.exists()) {
+            System.out.println("Append to file (y|n)");
+            String answer = scanner.nextLine();
+            append = answer.equalsIgnoreCase("y");
+        } else {
+            destinationFile.createNewFile();
+        }
+
+
+        FileOutputStream fileOutputStream = new FileOutputStream(destinationFile, append);
+        FileInputStream fileInputStream = new FileInputStream(sourceFile);
+
+        byte[] buffer = new byte[1024 * 4];
+        int data;
+        while ((data = fileInputStream.read(buffer)) != -1) {
+            fileOutputStream.write(buffer, 0, data);
+        }
+
+        fileInputStream.close();
+        fileOutputStream.close();
+
+        scanner.close();
 
     }
 

@@ -1,9 +1,9 @@
-package ru.mephi.week7.lesson1.Task2Soved;
+package ru.mephi.week7.lesson1.task2Soved;
 
-import ru.mephi.week7.lesson1.Task2Soved.exceptions.AccountNotFoundException;
-import ru.mephi.week7.lesson1.Task2Soved.exceptions.InsufficientBalanceException;
-import ru.mephi.week7.lesson1.Task2Soved.exceptions.InvalidSumException;
-import ru.mephi.week7.lesson1.Task2Soved.exceptions.LimitExceededException;
+import ru.mephi.week7.lesson1.task2Soved.exceptions.AccountNotFoundException;
+import ru.mephi.week7.lesson1.task2Soved.exceptions.InsufficientBalanceException;
+import ru.mephi.week7.lesson1.task2Soved.exceptions.InvalidSumException;
+import ru.mephi.week7.lesson1.task2Soved.exceptions.LimitExceededException;
 
 public class BankAccount {
 
