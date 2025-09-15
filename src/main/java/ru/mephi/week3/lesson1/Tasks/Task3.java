@@ -1,4 +1,4 @@
-package ru.mephi.week3.lesson1;
+package ru.mephi.week3.lesson1.Tasks;
 
 import java.util.Arrays;
 
@@ -16,12 +16,12 @@ public class Task3 {
                 {4, 5, 6, 6},
                 {7, 8, 9, 7}
         };
-
-        int[][] a = new int[12][12];
-
         int originRows = matrix.length;
         int originColumns = matrix[0].length;
-
+        for (int i = 0; i < originRows; i++) {
+            System.out.println(Arrays.toString(matrix[i]));
+        }
+        System.out.println();
         int[][] outArray = new int[originColumns][originRows];
 
         for (int i = 0; i < originRows; i++) {

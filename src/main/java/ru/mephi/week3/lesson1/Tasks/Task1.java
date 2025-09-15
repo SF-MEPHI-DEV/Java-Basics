@@ -1,4 +1,4 @@
-package ru.mephi.week3.lesson1;
+package ru.mephi.week3.lesson1.Tasks;
 
 import java.util.Arrays;
 
@@ -24,11 +24,18 @@ public class Task1 {
 
         int[] outArray = new int[nums1.length + nums2.length];
 
+        System.arraycopy(nums1, 0, outArray, 0, nums1.length);
+        System.arraycopy(nums2, 0 , outArray, nums1.length, nums2.length);
+        System.out.println("out array: " + Arrays.toString(outArray));
+
+        Arrays.sort(outArray);
+
+        /*
         int idx1 = 0;
         int idx2 = 0;
-
         for (int i = 0; i < outArray.length; i++) {
-
+            System.out.println("Iteration : " + i + " , out array: " + Arrays.toString(outArray));
+            System.out.println("Index : " + idx1 + " , Index : " + idx2);
             if (idx1 >= nums1.length) {
                 outArray[i] = nums2[idx2++];
             } else if (idx2 >= nums2.length) {
@@ -38,9 +45,8 @@ public class Task1 {
             } else {
                 outArray[i] = nums2[idx2++];
             }
-
         }
-
+        */
         System.out.println("out array: " + Arrays.toString(outArray));
 
     }
