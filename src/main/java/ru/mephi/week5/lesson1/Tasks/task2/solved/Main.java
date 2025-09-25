@@ -1,4 +1,4 @@
-package ru.mephi.week5.lesson1.task2.solved;
+package ru.mephi.week5.lesson1.Tasks.task2.solved;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

@@ -1,4 +1,4 @@
-package ru.mephi.week5.lesson1.task2.solved;
+package ru.mephi.week5.lesson1.Tasks.task2.solved;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -6,7 +6,7 @@ import java.util.Date;
 import java.util.List;
 
 public class EventManager {
-    private List<Event> events = new ArrayList<>();
+    private final List<Event> events = new ArrayList<>();
 
     public void addEvent(String title, Date date, String location) {
         events.add(new Event(title, date, location));

@@ -1,6 +1,5 @@
-package ru.mephi.week5.lesson1.task1;
+package ru.mephi.week5.lesson1.Tasks.task1;
 
-import java.sql.Time;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -36,8 +35,23 @@ public class Main {
      */
 
     public static void main(String[] args) throws ParseException {
+        String[] options = {
+            "Find date after n days",
+            "Find date after n months",
+            "Find day of the week",
+            "Find count of days between",
+            "Quit"
+        };
 
+        String dateForamtString = "yyyy-MM-dd";
+        SimpleDateFormat dateFormat = new SimpleDateFormat(dateForamtString);
 
+        boolean isWorking = true;
+        Scanner scanner = new Scanner(System.in);
+
+        while (isWorking) {
+
+        }
     }
 
 }
