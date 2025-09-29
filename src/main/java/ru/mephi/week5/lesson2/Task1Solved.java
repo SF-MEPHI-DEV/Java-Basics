@@ -53,10 +53,11 @@ public class Task1Solved {
         for (Object fileObject : files) {
 
             if (!(fileObject instanceof Path)) {
+                System.out.println(fileObject.toString() + "  - ошибка в обработке ");
                 continue;
             }
 
-            Path file = (Path) fileObject;
+            Path file = (Path)fileObject;
 
             if (Files.isRegularFile(file) && file.toString().endsWith(".txt")) {
 
@@ -65,15 +66,12 @@ public class Task1Solved {
 
                 if (fileModifiedDate.before(cutoffDate)) {
                     System.out.println("Обрабатываем файл: " + file);
-
                     Files.writeString(mergedFilePath, "=== Содержимое файла: " + file.getFileName() + " ===\n", StandardOpenOption.CREATE, StandardOpenOption.APPEND);
 
                     List<String> lines = Files.readAllLines(file);
                     Files.write(mergedFilePath, lines, StandardOpenOption.CREATE, StandardOpenOption.APPEND);
-
                     Files.delete(file);
                     System.out.println("Удалён файл: " + file);
-
                     filesMerged = true;
                 }
 
@@ -85,8 +83,6 @@ public class Task1Solved {
         } else {
             System.out.println("Нет файлов старше 7 дней для объединения.");
         }
-
-
     }
 
 }
