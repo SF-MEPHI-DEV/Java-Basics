@@ -1,4 +1,4 @@
-package ru.mephi.week6.lesson1;
+package ru.mephi.week6.lesson1.Task1;
 
 import java.io.*;
 import java.util.Scanner;
@@ -36,12 +36,20 @@ public class Task1 {
 
         File destinationFile = new File(destinationFilePath);
         boolean append = false;
+        boolean duplicate = false;
 
+        String postfix = "(1)";
+        /*
         if (destinationFilePath.equals(sourceFilePath)) {
-            System.out.println("file are the same");
+            System.out.println("Create dublicate to file (y|n)");
+            String answer = scanner.nextLine();
+            duplicate = answer.equalsIgnoreCase("y");
+            if (duplicate){
+                destinationFile = new File(destinationFilePath + postfix);
+            }
             return;
         }
-
+        */
         if (destinationFile.exists()) {
             System.out.println("Append to file (y|n)");
             String answer = scanner.nextLine();
@@ -59,12 +67,10 @@ public class Task1 {
         while ((data = fileInputStream.read(buffer)) != -1) {
             fileOutputStream.write(buffer, 0, data);
         }
-
         fileInputStream.close();
         fileOutputStream.close();
 
         scanner.close();
-
     }
 
 }

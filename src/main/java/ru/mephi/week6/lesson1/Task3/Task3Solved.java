@@ -1,4 +1,4 @@
-package ru.mephi.week6.lesson1;
+package ru.mephi.week6.lesson1.Task3;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

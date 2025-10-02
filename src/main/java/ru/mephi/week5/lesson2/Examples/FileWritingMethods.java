@@ -1,4 +1,4 @@
-package ru.mephi.week6.lesson1.Examples;
+package ru.mephi.week5.lesson2.Examples;
 
 import java.io.*;
 import java.nio.file.Files;

@@ -1,16 +1,13 @@
-package ru.mephi.week6.lesson1;
+package ru.mephi.week6.lesson1.Task2;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
-public class Task2 {
+public class Task2Solved {
 
     /**
-     * <h2>Задание: разработка программы для резервного копирования файлов с фильтрацией по типу</h2>
+     * <h2>Задание: программа для резервного копирования файлов с фильтрацией по типу</h2>
      * <br>
      * <h2>Описание: </h2>
      * <p>Вам необходимо написать программу, которая выполняет резервное копирование всех
@@ -24,7 +21,6 @@ public class Task2 {
      */
 
     public static void main(String[] args) throws IOException {
-
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter source file path: ");
@@ -44,6 +40,7 @@ public class Task2 {
         }
 
         FileOutputStream logStream = new FileOutputStream(logFile, true);
+
         writeToLog(logStream, "Copping was started.");
 
         File sourceDir = new File(sourceDirectory);
@@ -84,7 +81,6 @@ public class Task2 {
         System.out.println("Copping was ended. " + copiedFiles + " file were rewrote, were skipped: " + skippedFiles);
 
         logStream.close();
-
     }
 
     public static void writeToLog(FileOutputStream stream, String message) throws IOException {
@@ -97,8 +93,8 @@ public class Task2 {
         }
     }
 
-    public static File[] listFilesWithExtension(File directory, String extension) {
 
+    public static File[] listFilesWithExtension(File directory, String extension) {
         File[] files = directory.listFiles();
         if (files == null) {
             return null;
@@ -132,5 +128,4 @@ public class Task2 {
         }
 
     }
-
 }

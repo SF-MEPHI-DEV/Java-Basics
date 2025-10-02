@@ -1,4 +1,4 @@
-package ru.mephi.week6.lesson1;
+package ru.mephi.week6.lesson1.Task1;
 
 import java.io.*;
 import java.util.Scanner;
