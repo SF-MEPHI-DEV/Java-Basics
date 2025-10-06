@@ -17,18 +17,16 @@ public class Task2Solved {
 
     public static void main(String[] args) throws FileNotFoundException {
 
-        String filePath = "username.csv";
+        String filePath = "src/main/java/ru/mephi/week6/lesson2/employees.csv";
         Scanner scanner = new Scanner(new File(filePath));
 
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
-            String[] values = line.split(";");
+            String[] values = line.split(",");
             for (String value : values) {
                 System.out.print(value.trim() + " ");
             }
             System.out.println();
         }
-
     }
-
 }

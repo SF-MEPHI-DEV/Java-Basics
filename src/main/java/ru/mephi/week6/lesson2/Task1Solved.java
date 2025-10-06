@@ -17,7 +17,7 @@ public class Task1Solved {
 
     public static void main(String[] args) throws IOException {
 
-        String filePath = "output.txt";
+        String filePath = "src/main/java/ru/mephi/week6/lesson2/output.txt";
 
         File outputFile = new File(filePath);
         if (!outputFile.exists() && !outputFile.createNewFile()) {

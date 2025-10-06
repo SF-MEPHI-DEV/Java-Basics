@@ -19,8 +19,8 @@ public class Task3Solved {
      */
 
     public static void main(String[] args) throws IOException {
-        String inputFilePath = "output.txt";
-        String outputFilePath = "analysis_result.txt";
+        String inputFilePath = "src/main/java/ru/mephi/week6/lesson2/sample_text.txt";
+        String outputFilePath = "src/main/java/ru/mephi/week6/lesson2/analysis_result.txt";
 
         final int MAX_WORDS = 1000;
         String[] uniqueWords = new String[MAX_WORDS];
