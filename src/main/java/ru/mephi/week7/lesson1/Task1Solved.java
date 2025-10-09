@@ -45,7 +45,7 @@ public class Task1Solved {
                     break;
                 case "/":
                     if (num2 == 0) {
-                        throw new ArithmeticException("Деление на ноль запрещено.");
+                        throw new ArithmeticException("Деление на ноль запрещено" + num1 + "/" + num2);
                     }
                     result = num1 / num2;
                     break;

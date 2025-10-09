@@ -51,12 +51,13 @@ public class Main {
             account1.withdraw(500);
 
         } catch (
-                InsufficientBalanceException |
                 LimitExceededException |
                 InvalidSumException |
                 AccountNotFoundException e
         ) {
             System.out.println("Ошибка: " + e.getMessage());
+        } catch (InsufficientBalanceException e) {
+            System.out.println("Ошибка : недостаточно средств , недостаток : " + e.delta);
         }
 
     }

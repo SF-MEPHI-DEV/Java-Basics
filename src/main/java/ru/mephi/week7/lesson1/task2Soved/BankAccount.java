@@ -38,7 +38,7 @@ public class BankAccount {
             throw new InvalidSumException("Сумма для снятия должна быть положительной.");
         }
         if (amount > balance) {
-            throw new InsufficientBalanceException("Недостаточно средств для снятия.");
+            throw new InsufficientBalanceException("Недостаточно средств для снятия.",amount - balance);
         }
         if (amount > sumLimit) {
             throw new LimitExceededException("Сумма превышает лимит снятия.");
@@ -60,7 +60,7 @@ public class BankAccount {
             throw new InvalidSumException("Сумма для перевода должна быть положительной.");
         }
         if (amount > balance) {
-            throw new InsufficientBalanceException("Недостаточно средств для перевода.");
+            throw new InsufficientBalanceException("Недостаточно средств для перевода.",amount-balance);
         }
         this.balance -= amount;
         toAccount.balance += amount;

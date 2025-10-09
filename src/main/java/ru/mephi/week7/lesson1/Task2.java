@@ -1,6 +1,6 @@
-package ru.mephi.week7.lesson1.task2;
+package ru.mephi.week7.lesson1;
 
-public class Main {
+public class Task2 {
 
     /**
      * <h2>Задание: система управления банковским счётом</h2>
