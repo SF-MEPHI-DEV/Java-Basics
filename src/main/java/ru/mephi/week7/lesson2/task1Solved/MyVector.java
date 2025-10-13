@@ -7,6 +7,11 @@ public class MyVector {
     private int[] array;
     private int size;
     private int capacity;
+    //private int maxCapacityStep = 8;
+
+    public MyVector(int capacity) {
+        this.capacity = capacity;
+    }
 
     public MyVector() {
         capacity = 10;
@@ -26,7 +31,6 @@ public class MyVector {
         int[] newArray = new int[capacity];
         System.arraycopy(array, 0, newArray, 0, size);
         array = newArray;
-        // array = Arrays.copyOf(array, capacity);
     }
 
     public int get(int index) {
