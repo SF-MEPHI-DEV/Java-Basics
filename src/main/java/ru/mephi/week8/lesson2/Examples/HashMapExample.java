@@ -14,7 +14,6 @@ public class HashMapExample {
 
     public static void basicOperations() {
         System.out.println("=== Базовые операции HashMap ===");
-
         HashMap<String, Integer> ages = new HashMap<>();
 
         ages.put("Иван", 25);

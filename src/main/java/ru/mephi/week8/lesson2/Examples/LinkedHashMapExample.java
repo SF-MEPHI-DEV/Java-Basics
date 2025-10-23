@@ -10,7 +10,6 @@ public class LinkedHashMapExample {
         insertionOrderExample();
         hashMapVsLinkedHashMap();
         accessOrderMode();
-        lruCacheExample();
     }
 
     public static void insertionOrderExample() {
@@ -75,26 +74,6 @@ public class LinkedHashMapExample {
         printMap(map);
     }
 
-    public static void lruCacheExample() {
-        System.out.println("\n=== LRU Cache ===");
-
-        LRUCache<String, Integer> cache = new LRUCache<>(3);
-
-        cache.put("A", 1);
-        cache.put("B", 2);
-        cache.put("C", 3);
-        System.out.println("Cache: " + cache);
-
-        cache.get("A");
-        System.out.println("После get(A): " + cache);
-
-        cache.put("D", 4);
-        System.out.println("После put(D) - B удален: " + cache);
-
-        cache.put("E", 5);
-        System.out.println("После put(E) - C удален: " + cache);
-    }
-
     private static void printMap(Map<String, Integer> map) {
         System.out.print("  [");
         int i = 0;
@@ -109,16 +88,3 @@ public class LinkedHashMapExample {
     }
 }
 
-class LRUCache<K, V> extends LinkedHashMap<K, V> {
-    private final int capacity;
-
-    public LRUCache(int capacity) {
-        super(capacity, 0.75f, true);
-        this.capacity = capacity;
-    }
-
-    @Override
-    protected boolean removeEldestEntry(Map.Entry<K, V> eldest) {
-        return size() > capacity;
-    }
-}
