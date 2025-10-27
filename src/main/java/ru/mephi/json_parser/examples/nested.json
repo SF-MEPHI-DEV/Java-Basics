@@ -1,0 +1,30 @@
+{
+  "user": {
+    "id": 123,
+    "name": "Алиса",
+    "contacts": {
+      "email": "alice@mail.ru",
+      "phone": "+7-999-123-45-67",
+      "address": {
+        "city": "Москва",
+        "street": "Ленина",
+        "building": 10
+      }
+    }
+  },
+  "posts": [
+    {
+      "id": 1,
+      "title": "Первый пост",
+      "likes": 10,
+      "comments": ["Отлично!", "Супер"]
+    },
+    {
+      "id": 2,
+      "title": "Второй пост",
+      "likes": 25,
+      "comments": ["Хорошо", "Интересно", "Продолжай"]
+    }
+  ],
+  "totalPosts": 2
+}

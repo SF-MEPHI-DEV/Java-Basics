@@ -1,0 +1,7 @@
+{
+  "name": "Иван Петров",
+  "age": 25,
+  "email": "ivan@example.com",
+  "active": true,
+  "middleName": null
+}

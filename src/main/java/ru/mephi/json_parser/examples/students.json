@@ -1,0 +1,28 @@
+{
+  "course": "Java Basics",
+  "year": 2024,
+  "students": [
+    {
+      "id": 1,
+      "name": "Анна Иванова",
+      "email": "anna@university.edu",
+      "grades": [5, 5, 4, 5, 5],
+      "scholarship": true
+    },
+    {
+      "id": 2,
+      "name": "Борис Петров",
+      "email": "boris@university.edu",
+      "grades": [3, 4, 3, 4, 3],
+      "scholarship": false
+    },
+    {
+      "id": 3,
+      "name": "Дмитрий Сидоров",
+      "email": "dmitry@university.edu",
+      "grades": [5, 4, 5, 4, 5],
+      "scholarship": true
+    }
+  ],
+  "averageGrade": 4.2
+}

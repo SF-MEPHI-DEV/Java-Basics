@@ -19,7 +19,7 @@ public class LambdaClosureExample {
 
         // Ошибка компиляции:
         // переменная text уже определена в области видимости этого метода
-        //Consumer<String> c1 = text -> System.out.println(text);
+        //Consumer<String> c1 = (text ) -> System.out.println(text);
 
         // Рабочий вариант – используем другое имя
         Consumer<String> c2 =

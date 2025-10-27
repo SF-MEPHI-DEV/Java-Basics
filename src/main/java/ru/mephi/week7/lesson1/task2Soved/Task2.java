@@ -1,4 +1,4 @@
-package ru.mephi.week7.lesson1;
+package ru.mephi.week7.lesson1.task2Soved;
 
 public class Task2 {
 
